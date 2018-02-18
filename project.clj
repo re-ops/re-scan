@@ -17,7 +17,7 @@
 
      ; xml processing
      [tolitius/xml-in "0.1.0"]
-
+     [org.clojure/data.xml "0.0.8"]
    ]
 
    :plugins [
