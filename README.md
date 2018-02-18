@@ -9,7 +9,9 @@ A Clojure-fied Nmap wrapper.
 
 In your Lein project:
 
-[re-scan "0.1.0"]
+```clojure
+   [re-scan "0.1.0"]
+```
 
 ```clojure
 user=> (use 're-scan.core)
