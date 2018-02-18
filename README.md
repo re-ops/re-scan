@@ -7,16 +7,20 @@ A Clojure-fied Nmap wrapper.
 
 # Usage
 
+In your Lein project:
+
+[re-scan "0.1.0"]
+
 ```clojure
-
-user=>
-
+user=> (use 're-scan.core)
+user=> (pprint (open-ports (nmap "/usr/bin/" "-T5" "foo")))
 ```
 
 # Prerequisite
 
 * JDK 8
 * lein
+* password-less sudo Nmap access
 
 # Copyright and license
 
