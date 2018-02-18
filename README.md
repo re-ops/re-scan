@@ -2,7 +2,7 @@
 
 A Clojure-fied Nmap wrapper.
 
-[![Build Status](https://travis-ci.org/re-ops/re-gent.png)](https://travis-ci.org/re-ops/re-gent)
+[![Build Status](https://travis-ci.org/re-ops/re-scan.png)](https://travis-ci.org/re-ops/re-scan)
 
 
 # Usage
