@@ -14,6 +14,16 @@ In your Lein project:
 ```clojure
 user=> (use 're-scan.core)
 user=> (pprint (open-ports (nmap "/usr/bin/" "-T5" "foo")))
+({"foo"
+  ({:protocol "tcp",
+    :portid "22",
+    :state "open",
+    :reason "syn-ack",
+    :reason_ttl "64",
+    :name "ssh",
+    :method "table",
+    :conf "3"}
+    ...
 ```
 
 # Prerequisite

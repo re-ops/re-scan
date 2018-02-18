@@ -17,10 +17,13 @@
 (defn- attr [a e]
   (get-in e [:attrs a]))
 
+(defn- port [{:keys [attrs content]}]
+  (apply merge attrs (map :attrs content)))
+
 (defn- host [m]
   (let [name (attr :name (first (xml/find-first m [:host :hostnames])))
         address (attr :addr (first (filter-tags :address (xml/find-all m [:host]))))
-        ports (filter-tags :port (xml/find-all m [:host :ports]))]
+        ports (map port (filter-tags :port (xml/find-all m [:host :ports])))]
     {(or name address) ports}))
 
 (defn- hosts [scan]
@@ -34,3 +37,7 @@
     (if (= 0 exit)
       (dx/parse-str out)
       (throw (ex-info "failed to scan" {:result res :path path :flags flags :hosts hosts})))))
+
+(comment
+  (def scan (nmap "/usr/bin/" "-T5" ""))
+  (pprint (open-ports scan)))
