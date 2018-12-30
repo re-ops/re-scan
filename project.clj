@@ -1,4 +1,4 @@
-(defproject re-scan "0.2.0"
+(defproject re-scan "0.2.1"
   :description "A Clojure-fied Nmap wrapper"
   :url "https://github.com/re-ops/re-scan"
   :license  {:name "Apache License, Version 2.0" :url "http://www.apache.org/licenses/LICENSE-2.0.html"}

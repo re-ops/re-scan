@@ -41,7 +41,7 @@
 (defn into-hosts
   "Convert scan result into a host -> addresses mapping using a -sP scan"
   [scan]
-  (-> scan hosts (map host-addresses)))
+  (->> scan hosts (map host-addresses)))
 
 (defn nmap [path flags hosts]
   (let [{:keys [exit out err] :as res} (sh "sudo" (<< "~{path}/nmap") flags "-oX" "-" hosts)]
